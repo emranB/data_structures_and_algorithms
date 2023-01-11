@@ -1,4 +1,4 @@
-1. nuWays.js
+1. nuWays.js:
 Given number of rolls allowed for a single dice, and a threshold value to reach, find the number of ways the threshold value can be reached or surpassed by summing the value of each dice roll
  
     findWays(numRolls, target)
