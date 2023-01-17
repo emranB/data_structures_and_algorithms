@@ -15,6 +15,7 @@ Given number of rolls allowed for a single dice, and a threshold value to reach,
 /*
   Rewrite the following function using a for loop to use recursion instead of a for loop
 */
+
 const sumAllElementsByName_loop = function(itemsArr, targetName) {
   let result = 0;
   for (let i = 0; i < itemsArr.length; i++) {
