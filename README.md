@@ -12,9 +12,9 @@ Given number of rolls allowed for a single dice, and a threshold value to reach,
 
 2. loopToResursion.js
 
-/*
-  Rewrite the following function using a for loop to use recursion instead of a for loop
-*/
+
+Rewrite the following function using a for loop to use recursion instead of a for loop
+
 
     const sumAllElementsByName_loop = function(itemsArr, targetName) {
       let result = 0;
@@ -25,3 +25,51 @@ Given number of rolls allowed for a single dice, and a threshold value to reach,
       }
       return result;
     }
+
+
+3. rewriteRowsAndCols.js
+
+Given a 2d matrix of m x n dimensions and a target value, find every element in the array that matches the target value and replace the values in that row and column to the target value
+
+eg. 
+    
+    target = 2
+    input = [               
+        [1, 1, 2, 1],
+        [1, 1, 1, 1],
+        [1, 1, 1, 1]
+    ]
+    ------------------
+    output = [
+        [2, 2, 2, 2],
+        [1, 1, 2, 1],
+        [1, 1, 2, 1]
+    ]
+
+    eg. 
+    target = 2
+    input = [               
+        [1, 1, 2, 1],
+        [1, 2, 1, 1],
+        [1, 1, 1, 1]
+    ]
+    ------------------
+    output = [
+        [2, 2, 2, 2],
+        [2, 2, 2, 2],
+        [1, 2, 2, 1]
+    ]
+
+    eg. 
+    target = 2
+    input = [               
+        [1, 1, 2, 2],
+        [1, 2, 1, 1],
+        [1, 1, 1, 1]
+    ]
+    ------------------
+    output = [
+        [2, 2, 2, 2],
+        [2, 2, 2, 2],
+        [1, 2, 2, 2]
+    ]
