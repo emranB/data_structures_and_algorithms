@@ -37,7 +37,7 @@ const coordinateAsString = function(x, y) {
 } 
 
 const rewriteRowsAndCols = function(matrix, targetValue) {
-    let visited = [] // Array of coordinates: String(row_col), eg. (2_3) -> need to store as string, since an array value cannot be used to comparison
+    let visited = new Set() // Array of coordinates: String(row_col), eg. (2_3) -> need to store as string, since an array value cannot be used to comparison
 
     for (let row = 0; row < matrix.length; row++) {
         for (let col = 0; col < matrix[0].length; col++) {
@@ -45,10 +45,10 @@ const rewriteRowsAndCols = function(matrix, targetValue) {
             let coordinate = coordinateAsString(row, col)
             
             if (matrix[row][col] === targetValue) {
-                if (!(visited.includes(coordinate))) {
+                if (!(visited.has(coordinate))) {
 
                     // Found matching value, run operations
-                    visited.push(coordinate)                    
+                    visited.add(coordinate)                    
     
                     // rewrite all row elems
                     for (let i = 0; i < matrix.length; i++) {
@@ -56,7 +56,7 @@ const rewriteRowsAndCols = function(matrix, targetValue) {
                         // don't store it in 'visited' as it will need to be processed as operable coordinate
                         if (matrix[i][col] != targetValue) {    
                             matrix[i][col] = targetValue
-                            visited.push(coordinateAsString(i, col))
+                            visited.add(coordinateAsString(i, col))
                         }
                     }
     
@@ -66,7 +66,7 @@ const rewriteRowsAndCols = function(matrix, targetValue) {
                         // don't store it in 'visited' as it will need to be processed as operable coordinate
                         if (matrix[row][i] != targetValue) {    
                             matrix[row][i] = targetValue
-                            visited.push(coordinateAsString(row, i))
+                            visited.add(coordinateAsString(row, i))
                         }
                     }
                 }
