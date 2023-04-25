@@ -161,7 +161,7 @@ const mergeLists = function (l1, l2) {
     console.log("----------------------------------------------")
 }
 
-Test 7
+// Test 7
 {
     console.log("Test 6")
     console.log("----------------------------------------------")

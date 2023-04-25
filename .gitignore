@@ -2,3 +2,4 @@ test
 test*
 tes.js
 .vscode/*
+*.bak
